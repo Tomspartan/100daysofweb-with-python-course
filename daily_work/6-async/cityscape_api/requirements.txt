@@ -1,0 +1,11 @@
+# Web framework requirements
+flask
+quart
+# Calling services requirements
+requests
+
+aiohttp
+aiodns
+cchardet
+
+
