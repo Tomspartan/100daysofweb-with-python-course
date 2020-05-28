@@ -23,6 +23,46 @@
   const secretNumber = getRandomInt(1, 15);
 
   // you code
+  console.log('Guess the secret number: ');
+
+  const maxAttempts = 5;
+  let numGuesses = 0;
+
+  while(true){
+    let guess = prompt('Enter a number between 1 and 15: ');
+
+    console.log(parseInt(guess));
+    console.log(typeof parseInt(guess));
+
+    if(guess === null || guess === 'q'){
+      console.log('Bye');
+      break;
+    }
+
+    guess = parseInt(guess);
+    if(isNaN(guess)){
+      console.log('Not a number, please try again');
+      continue;
+    }
+
+    numGuesses += 1;
+
+    if(guess === secretNumber){
+      console.log('You guessed it! # attempts: ' + numGuesses);
+      break;
+    } else if(guess < secretNumber) {
+      console.log('Too low');
+    } else {
+      console.log('Too high');
+    }
+
+    if(numGuesses === maxAttempts){
+      console.log('Max number of attempts used, game over');
+      break;
+    }
+  }
+
+
 
   </script>
 </body>

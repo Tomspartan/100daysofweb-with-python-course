@@ -23,7 +23,16 @@
   const names = ['tim', 'sara', 'mike', 'julian', 'eva', 'amy'];
   const ages = [14, 33, 17, 18, 25, 7];
 
-  // you code
+  for(let i=0; i < names.length; i++){
+    let allowed = 'allowed'
+    if(ages[i] < minAge){
+      allowed = 'not ' + allowed;
+    }
+
+    console.log(names[i] + ' (' + ages[i] + ') is ' + allowed + ' to drive');
+    // f-string like
+    // console.log(`${names[i]} (${ages[i]}) is ${allowed} to drive`);
+  }
 
   </script>
 </body>
